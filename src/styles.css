@@ -25,6 +25,7 @@ body {
   align-items: center;
 
   background-color: #2d2d2d;
+  height: 100vh;
 }
 
 body,
@@ -36,10 +37,11 @@ html {
 }
 
 .container {
-  width: 600px;
+  width: 100%;
   height: 100%;
   background-color: #f2eecb;
   border-radius: 4px;
+  margin-top: 200px;
 
   padding: 32px;
 }
@@ -47,6 +49,7 @@ html {
 .frame {
   border: 1px solid var(--main-black-color);
   height: 100%;
+  padding: 12px;
 
   display: flex;
   flex-direction: column;
@@ -126,15 +129,17 @@ html {
 .todos {
   display: flex;
   flex-direction: column;
+
+  min-height: 500px;
 }
 
 .todo {
   position: relative;
 
-  flex: 1 0 auto;
+  flex: 1;
   text-align: center;
 
-  min-height: 34px;
+  max-height: 34px;
   margin: 16px 0 0;
   font-family: "Homemade Apple", sans-serif;
   font-size: 24px;
@@ -143,6 +148,8 @@ html {
 }
 
 .todo-text {
+  width: 100%;
+  max-height: 500px;
   position: absolute;
   left: 50%;
   transform: translate(-50%);
