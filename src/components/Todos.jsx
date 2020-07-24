@@ -1,24 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import Todo from "./Todo";
 
-const Todos = () => {
-  const todos = [
-    {
-      text: "belajar React"
-    },
-    {
-      text: "belajar React HOoks"
-    },
-    {
-      text: "belajar React props"
-    },
-    {
-      text: "belajar React dasd "
-    },
-    {
-      text: "belajar React state tapi "
-    }
-  ];
+const Todos = ({ todos }) => {
   return (
     <section className="todos">
       {todos.map(todo => {
@@ -26,6 +11,14 @@ const Todos = () => {
       })}
     </section>
   );
+};
+
+Todos.propTypes = {
+  todos: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string
+    })
+  )
 };
 
 export default Todos;
