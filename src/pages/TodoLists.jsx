@@ -8,25 +8,31 @@ import Todos from "../components/Todos";
 const TodoLists = () => {
   const [todos, setTodos] = useState([
     {
-      text: ""
+      text: "belajar"
     },
     {
-      text: " "
+      text: "asd "
     },
     {
-      text: " "
+      text: "asdasdasd "
     },
     {
-      text: "  "
+      text: "  asdasdasd"
     },
     {
-      text: "  "
+      text: " asdasdas "
     }
   ]);
+
+  const addTodo = value => {
+    const addedTodo = [...todos, { text: value }];
+
+    setTodos(addedTodo);
+  };
   return (
     <Paper>
       <Header />
-      <TodoForm />
+      <TodoForm addTodo={addTodo} />
       <Todos todos={todos} />
     </Paper>
   );
